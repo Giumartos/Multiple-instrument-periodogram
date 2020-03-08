@@ -140,12 +140,12 @@ def gls (instruments: list, freq, filename):
     
         # Solving the system
     
-        results = linsolve((Matrix(matrix), Matrix(res)), variables)
+        results = np.linalg.solve(matrix, res)
 
         coefs = [] # coefficients
         for v in range(len(variables)):
-            coefs.append(results.args[0][v])
-        coefs = np.array(coefs).astype(float)
+            coefs.append(np.float32(results[v]))
+        coefs = np.array(coefs)
                 
         offsets = coefs[2:]     
         a, b = coefs[0], coefs[1]
