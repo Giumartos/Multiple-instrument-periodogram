@@ -6,10 +6,8 @@ Created on Thu Feb  6 09:19:04 2020
 @author: giumartos
 """
 
-from sympy import Matrix, linsolve
 import numpy as np
 import matplotlib.pyplot as plt
-from timeit import default_timer as timer
 
 #---------------------------------------------------------------------------------------------------------------------------------
 def savetofile(x, y, outfile_name):
@@ -53,7 +51,7 @@ def get_data (instruments: list, freq, filename):
 def gls (instruments: list, freq, filename):
 
     '''
-    Calculates and plots the multiple-intrument periodogram.
+    Computes and plots the multiple-intrument periodogram.
     '''
     
     power = []
@@ -151,7 +149,7 @@ def gls (instruments: list, freq, filename):
         a, b = coefs[0], coefs[1]
 
 
-        # Calculating the X**2 and the power
+        # Computing the X**2 and the power
  
         for k in range (len(instruments)):
             cos = np.cos(omega*time[k])
@@ -203,9 +201,9 @@ def gls (instruments: list, freq, filename):
 
 #---------------------------------------------------------------------------------------------------------------
 instruments = [] # List with the name of the instruments
-filename = # Name of the rv file
-freq = np.linspace(1/15, 10, 1e4) # Frequency to evaluate the data
+filename = # Name of the rv file (with the path to the file)
+freq = np.linspace(1./15, 10, 1e4) # Frequency to evaluate the data
 imagename = # Name to save the periodogram image plot
-outfile = # Name of the file to save the frequencies and the power 
+outfile = # Name of the file to save the frequencies and the power values
 
 gls(instruments, freq, filename)
