@@ -5,3 +5,4 @@ This code generates a periodogram considering data obtained by different instrum
 the power values.
 The user only needs to insert a list with the name of the instruments used, the name of the file containing the data 
 and frequency range to evaluate the data. 
+
