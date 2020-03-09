@@ -200,10 +200,10 @@ def gls (instruments: list, freq, filename):
     plt.show()
 
 #---------------------------------------------------------------------------------------------------------------
-instruments = [] # List with the name of the instruments
-filename = # Name of the rv file (with the path to the file)
+instruments = ['HIRES', 'Hamilton2006', 'Hamilton2016'] # List with the name of the instruments
+filename = '70Vir.txt' # Name of the rv file (with the path to the file)
 freq = np.linspace(1./15, 10, 1e4) # Frequency to evaluate the data
 imagename = # Name to save the periodogram image plot
-outfile = # Name of the file to save the frequencies and the power values
+outfile = '70Vir_GLS2.txt'# Name of the file to save the frequencies and the power values
 
 gls(instruments, freq, filename)
