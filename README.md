@@ -8,5 +8,7 @@ and frequency range to evaluate the data.
 
   ![](70Vir_GLS2.png)
 
-## Data format
+## Input data format
 A file consisting of the following columns: time, data, data error, intrument name.
+
+Author: Giulia Martos (giulia_martos@usp.br)
