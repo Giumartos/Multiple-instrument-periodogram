@@ -1,4 +1,4 @@
-#Multiple-instrument-periodogram
+# Multiple-instrument-periodogram
 Periodogram generator for a multiple-instrument data set, considering their different offsets.
 
 This code generates a periodogram considering data obtained by different instruments, with the option to save the image and 
